@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'services/push_notifications_service.dart';
+import '../services/push_notifications_service.dart';
 
 class CustomFloatingActions extends StatelessWidget {
   const CustomFloatingActions({Key? key}) : super(key: key);

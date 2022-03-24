@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../custom_floating_actions.dart';
+import '../widgets/custom_floating_actions.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
