@@ -66,7 +66,7 @@ class PushNotificationsService {
     //Push Notifications
     await Firebase.initializeApp();
     token = await FirebaseMessaging.instance.getToken();
-    print('Token: $token');
+    // print('Token: $token');
 
     //Handlers
     FirebaseMessaging.onBackgroundMessage(_backgroundHandler);
@@ -79,10 +79,27 @@ class PushNotificationsService {
   static closeStreams() {
     _messageStreamController.close();
   }
+
+  // Subscription and unsubscription methods
+  static Future subscription() async {
+    // subscribe to topic on each app start-up
+    await FirebaseMessaging.instance.subscribeToTopic('all');
+  }
+
+  static Future unsubscription() async {
+    await FirebaseMessaging.instance.unsubscribeFromTopic('all');
+  }
 }
 
 /**
  * Solución a mostrar las notificaciones cuando la App está abierta (Android). VER:
  * https://www.udemy.com/course/flutter-ios-android-fernando-herrera/learn/lecture/26303768#questions/15202366
  * https://firebase.flutter.dev/docs/messaging/notifications/#application-in-foreground
+ * 
+ * SUSCRIPCION/DESUSCRIPCION A TOPICS. VER:
+ * https://github.com/Amanullahgit/Flutter-v2-FCM-Notifications/blob/master/lib/main.dart
+ * https://firebase.flutter.dev/docs/messaging/usage/#topics
+ * 
+ * Firebase Cloud Messaging important REST API’s. VER:
+ * https://selvaganesh93.medium.com/firebase-cloud-messaging-important-rest-apis-be79260022b5
  */

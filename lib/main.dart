@@ -79,4 +79,14 @@ class _MyAppState extends State<MyApp> {
  * Cuando la aplicación esta cerrada no me navega a la siguiente pantalla. VER:
  * https://www.udemy.com/course/flutter-ios-android-fernando-herrera/learn/lecture/14951478#questions/14874092
  * https://firebase.flutter.dev/docs/messaging/notifications/#handling-interaction
+ * 
+ * PARA EVITAR EL ERROR [FlutterError (There are multiple heroes that share the same tag within a subtree]. VER:
+ * https://stackoverflow.com/questions/51125024/there-are-multiple-heroes-that-share-the-same-tag-within-a-subtree
+ * 
+ * SUSCRIPCION/DESUSCRIPCION A TOPICS. VER:
+ * https://github.com/Amanullahgit/Flutter-v2-FCM-Notifications/blob/master/lib/main.dart
+ * https://firebase.flutter.dev/docs/messaging/usage/#topics
+ * 
+ * Firebase Cloud Messaging important REST API’s. VER:
+ * https://selvaganesh93.medium.com/firebase-cloud-messaging-important-rest-apis-be79260022b5
  */
